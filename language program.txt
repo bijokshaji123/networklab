@@ -1,0 +1,31 @@
+#!/bin/bash
+echo -e "1. Andhra Pradesh \n2. Assam \n3. Bihar \n4. Karnataka \n5. Kerala \n6. 
+Tamil Nadu \n7. Exit"
+read -p "Enter the Indian state number: " state
+case $state in
+1)
+ echo "Language: Telugu"
+ ;;
+ 2)
+ echo "Language: Assamese"
+ ;;
+ 3)
+ echo "Language: Hindi"
+ ;;
+ 4)
+ echo "Language: Kannada"
+ ;;
+ 5)
+ echo "Language: Malayalam"
+ ;;
+ 6)
+ echo "Language: Tamil"
+ ;;
+7)
+ echo "Exiting..."
+ exit 0
+ ;;
+*)
+ echo "Language: Unknown"
+ ;;
+esac

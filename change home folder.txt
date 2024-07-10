@@ -1,0 +1,9 @@
+#!/bin/bash
+result=$(grep -E 'stud' /etc/passwd)
+result=$(echo "${result}" | cut -d: -f1)
+echo "$result"
+for f in $result; do
+ p="${f}123"
+ echo "$f:$p" | sudo chpasswd
+ sudo usermod -m -d /usr "$f"
+done
